@@ -96,11 +96,15 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
-import { AuthService } from './service/auth.service';
+import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guard/auth.guard';
-import { UserService } from './service/user.service';
+import { UserService } from './services/user.service';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { NotificationModule } from './notification.module';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { UsersComponent } from './pages/users/users.component';
+import { RolsComponent } from './pages/rols/rols.component';
+import { AnnouncementsAdminComponent } from './pages/announcements-admin/announcements-admin.component';
 
 registerLocaleData(en);
 
@@ -121,7 +125,11 @@ registerLocaleData(en);
     AuthComponent,
     NotfoundComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    FavoritesComponent,
+    UsersComponent,
+    RolsComponent,
+    AnnouncementsAdminComponent
   ],
   imports: [
     BrowserModule,
