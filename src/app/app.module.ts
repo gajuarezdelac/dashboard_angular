@@ -8,7 +8,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -96,6 +96,11 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AuthService } from './service/auth.service';
+import { AuthGuard } from './guard/auth.guard';
+import { UserService } from './service/user.service';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { NotificationModule } from './notification.module';
 
 registerLocaleData(en);
 
@@ -124,6 +129,7 @@ registerLocaleData(en);
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NotificationModule,
     BrowserAnimationsModule,
     IconsProviderModule,
     NzAffixModule,
@@ -195,7 +201,9 @@ registerLocaleData(en);
     NzResizableModule,
     NzPipesModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [AuthService, AuthGuard,UserService,
+     { provide: NZ_I18N, useValue: en_US},
+     {provide:   HTTP_INTERCEPTORS, useClass:  AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

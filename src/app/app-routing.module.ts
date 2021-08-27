@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './guard/auth.guard';
 import { AuthComponent } from './pages/auth/auth.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RecoveryPasswordComponent } from './pages/auth/recovery-password/recovery-password.component';
@@ -19,14 +20,15 @@ const routes: Routes = [
      { path: "profile", component: ProfileComponent },
      { path: "dashboard", component: DashboardComponent },
      { path: '', pathMatch: 'full', redirectTo: '/login' },
-  ]
+  ],
+  // canActivate: [ AuthGuard ]
   },
   {path: 'auth', component: AuthComponent, children : [
     { path: "login", component: LoginComponent },
     { path: "register", component: RegisterComponent },
     { path: "recovery-password", component: RecoveryPasswordComponent },
   ]},
-  {path: '**', component: HomeComponent},
+  {path: '**', component: HomeComponent,  redirectTo: ''},
 ];
 
 @NgModule({

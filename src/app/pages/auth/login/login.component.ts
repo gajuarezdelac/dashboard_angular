@@ -16,10 +16,9 @@ export class LoginComponent implements OnInit {
       if (this.validateForm.controls.hasOwnProperty(i)) {
         this.validateForm.controls[i].markAsDirty();
         this.validateForm.controls[i].updateValueAndValidity();
-
-        this.router.navigate(["/welcome/dashboard"]);
-
       }
+
+      this.router.navigate(["/welcome/dashboard"]);
     }
   }
 
