@@ -93,6 +93,7 @@ import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 registerLocaleData(en);
 
@@ -110,7 +111,8 @@ registerLocaleData(en);
     RegisterComponent,
     ResetPasswordComponent,
     RecoveryPasswordComponent,
-    AuthComponent
+    AuthComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
