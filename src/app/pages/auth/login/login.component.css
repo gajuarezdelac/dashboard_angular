@@ -1,5 +1,10 @@
-.login-form {
-    max-width: 300px;
+
+  input {
+    height: 25px;
+  }
+
+  .input-content {
+    margin: 15px 0px 15px 0px;
   }
 
   .login-form-margin {
@@ -13,3 +18,23 @@
   .login-form-button {
     width: 100%;
   }
+
+  
+.welcome {
+  font-weight: bold;
+}
+
+.content-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 0px 0px;
+
+}
+
+.text-in{
+  font-size: 14px;
+  color: rgb(9, 9, 31);
+  cursor: pointer;
+}
+  

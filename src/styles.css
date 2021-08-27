@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+header,
+section {
+  overflow-x: hidden;
+}
+
+

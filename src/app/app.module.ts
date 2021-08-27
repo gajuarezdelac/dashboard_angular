@@ -19,7 +19,7 @@ import { HelpComponent } from './pages/help/help.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
-import { RecoveryPasswordComponent } from './pages/recovery-password/recovery-password.component';
+import { RecoveryPasswordComponent } from './pages/auth/recovery-password/recovery-password.component';
 import { AuthComponent } from './pages/auth/auth.component';
 
 
@@ -94,6 +94,8 @@ import { NzPipesModule } from 'ng-zorro-antd/pipes';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HomeComponent } from './pages/home/home.component';
 
 registerLocaleData(en);
 
@@ -112,7 +114,9 @@ registerLocaleData(en);
     ResetPasswordComponent,
     RecoveryPasswordComponent,
     AuthComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

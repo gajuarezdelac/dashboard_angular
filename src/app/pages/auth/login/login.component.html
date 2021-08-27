@@ -1,12 +1,18 @@
 <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-    <nz-form-item>
+
+  <p class="presentacion-title"><span class="welcome">Bienvenido</span>, Ingresa tus datos para iniciar sesión: </p>
+    
+
+  
+    <nz-form-item class="input-content">
       <nz-form-control nzErrorTip="Please input your username!">
         <nz-input-group nzPrefixIcon="user">
-          <input type="text" nz-input formControlName="userName" placeholder="Username" />
+          <input type="text" nzSize="large" nz-input formControlName="userName" placeholder="Username" />
         </nz-input-group>
       </nz-form-control>
     </nz-form-item>
-    <nz-form-item>
+
+    <nz-form-item class="input-content" > 
       <nz-form-control nzErrorTip="Please input your Password!">
         <nz-input-group nzPrefixIcon="lock">
           <input type="password" nz-input formControlName="password" placeholder="Password" />
@@ -24,6 +30,11 @@
       </div>
     </div>
     <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
-    Or
-    <a>register now!</a>
+    
+  <div class="content-options">
+    <!-- <p class="text-in" routerLink="/register" >¿Eres nuevo?</p> -->
+    <p class="text-in" routerLink="/auth/register" > ¿Eres nuevo? </p>
+  </div>
+
+  
   </form>
