@@ -1,3 +1,5 @@
+<nz-spin [nzSpinning]="isSpinning">
+  
 <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
 
   <p class="presentacion-title"><span class="welcome">Bienvenido</span>, Ingresa tus datos para iniciar sesión: </p>
@@ -5,7 +7,7 @@
     <nz-form-item class="input-content">
       <nz-form-control nzErrorTip="Please input your username!">
         <nz-input-group nzPrefixIcon="user">
-          <input type="text" nzSize="large" nz-input formControlName="userName" placeholder="Username" />
+          <input type="text" nzSize="large" nz-input formControlName="username" placeholder="Username" />
         </nz-input-group>
       </nz-form-control>
     </nz-form-item>
@@ -36,3 +38,5 @@
 
   
   </form>
+
+</nz-spin>

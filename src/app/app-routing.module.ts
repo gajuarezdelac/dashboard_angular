@@ -13,6 +13,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SearchComponent } from './pages/search/search.component';
+import { UsersComponent } from './pages/users/users.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 const routes: Routes = [
@@ -24,9 +25,10 @@ const routes: Routes = [
      { path: "my-goods", component: MyregistersComponent },
      { path: "profile", component: ProfileComponent },
      { path: "profile", component: FavoritesComponent },
+     { path: "users", component: UsersComponent },
      { path: '', pathMatch: 'full', redirectTo: '/login' },
     ],
-  // canActivate: [ AuthGuard ]
+  canActivate: [ AuthGuard ]
   },
   {path: 'auth', component: AuthComponent, children : [
     { path: "login", component: LoginComponent },

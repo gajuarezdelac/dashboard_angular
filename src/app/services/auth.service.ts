@@ -14,7 +14,6 @@ export class AuthService {
   private token: any;
   private loggedInUsername: any;
   private jwtHelper = new JwtHelperService;
-
   
   constructor(private http: HttpClient) { }
 
